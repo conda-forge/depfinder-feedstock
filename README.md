@@ -3,7 +3,7 @@ About depfinder
 
 Home: http://github.com/ericdill/depfinder
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 

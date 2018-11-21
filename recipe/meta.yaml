@@ -1,31 +1,27 @@
-{% set version = "2.2.0" %}
-{% set sha256 = "2feed455b5b2184d6a174358a6d2d7c8bb52f59802941808ca5a81678fe9279f" %}
-{% set name = "depfinder" %}
+{% set version = "2.2.1" %}
 
 package:
-  name: {{ name }}
+  name: depfinder
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/d/depfinder/depfinder-{{ version }}.tar.gz
+  sha256: 720c96b5dca5222b92836cf9422b39ec01a19ea4df91085d78b13439cec18ae6
 
 build:
-  noarch: python
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
   entry_points:
     - depfinder = depfinder.cli:cli
 
 requirements:
   host:
+    # Python version is limited by stdlib-list.
+    - python <3.8
     - pip
-    - python <3.7
-    - setuptools
   run:
-    # stdlib-list is not yet py37 compatible https://github.com/ericdill/depfinder/issues/20
-    - python <3.7
+    - python <3.8
     - stdlib-list
     - pyyaml
 
@@ -37,7 +33,7 @@ test:
 
 about:
   home: http://github.com/ericdill/depfinder
-  license: BSD 3-Clause
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: Find all the unique imports in your library
 
