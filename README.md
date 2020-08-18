@@ -5,7 +5,7 @@ Home: http://github.com/ericdill/depfinder
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Find all the unique imports in your library
 
