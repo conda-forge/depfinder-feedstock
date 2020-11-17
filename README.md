@@ -5,11 +5,9 @@ Home: http://github.com/ericdill/depfinder
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/depfinder-feedstock/blob/master/LICENSE.txt)
 
 Summary: Find all the unique imports in your library
-
-
 
 Current build status
 ====================
@@ -116,6 +114,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@CJ-Wright](https://github.com/CJ-Wright/)
 * [@ericdill](https://github.com/ericdill/)
 * [@mariusvniekerk](https://github.com/mariusvniekerk/)
 * [@ocefpaf](https://github.com/ocefpaf/)
