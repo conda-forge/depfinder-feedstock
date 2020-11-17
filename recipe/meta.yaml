@@ -1,4 +1,4 @@
-{% set version = "2.4.1" %}
+{% set version = "2.5.1" %}
 
 package:
   name: depfinder
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/depfinder/depfinder-{{ version }}.tar.gz
-  sha256: 221df6c85999df08730b5a34d8f77033bad634aa24501ea906d1be2da5026bfc
+  sha256: 14444045876bff6b87895dee9e457c6ab9b7a4e271c3fd31a410f4e3a75af043
 
 build:
   number: 0
