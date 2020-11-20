@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/depfinder/depfinder-{{ version }}.tar.gz
-  sha256: 2a39a7f9da544e0363d91412dadae8620a29e66e92632c0a2eb913ab0c617a84
+  sha256: d7fbcc4a7a0f847e0a175f4211934c9fafa3588e5790c9e1d00c3cc822415bb0
 
 build:
   number: 0
