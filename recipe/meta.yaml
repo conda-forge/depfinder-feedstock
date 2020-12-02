@@ -9,7 +9,7 @@ source:
   sha256: c319bc9d3616d1bb840469e4e40bb112772af0679c262dd6d247bacad501b0a7
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -17,11 +17,10 @@ build:
 
 requirements:
   host:
-    # Python version is limited by stdlib-list.
-    - python <3.9
+    - python >=2.7
     - pip
   run:
-    - python <3.9
+    - python >=2.7
     - stdlib-list
     - pyyaml
 
