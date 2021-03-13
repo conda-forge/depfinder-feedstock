@@ -17,11 +17,10 @@ build:
 
 requirements:
   host:
-    # Python version is limited by stdlib-list.
-    - python <3.9
+    - python
     - pip
   run:
-    - python <3.9
+    - python
     - stdlib-list
     - pyyaml
 
