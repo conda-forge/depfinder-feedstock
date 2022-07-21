@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/ericdill/depfinder/releases/download/v{{ version }}/depfinder-v{{ version }}.tar.gz
-  sha256: 6181118c1340ace3f9228fb2ab190afef05b53167e8ec7a385a1395680279c93
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/depfinder-{{ version }}.tar.gz
+  sha256: 5d80bce796ea7a1994fb888ac4056e5ff9d2b390d7d656e75c45eedaef916090
 
 build:
   number: 0
