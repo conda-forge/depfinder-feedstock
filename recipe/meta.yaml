@@ -1,19 +1,19 @@
+{% set name = "depfinder" %}
 {% set version = "2.8.1" %}
 
 package:
-  name: depfinder
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/depfinder-{{ version }}.tar.gz
   sha256: 5d80bce796ea7a1994fb888ac4056e5ff9d2b390d7d656e75c45eedaef916090
-
 build:
-  number: 0
-  noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - depfinder = depfinder.cli:cli
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
