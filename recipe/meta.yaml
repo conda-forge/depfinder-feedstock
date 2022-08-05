@@ -11,7 +11,6 @@ source:
 build:
   entry_points:
     - depfinder = depfinder.cli:cli
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
