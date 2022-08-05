@@ -1,5 +1,5 @@
 {% set name = "depfinder" %}
-{% set version = "2.8.1" %}
+{% set version = "2.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,23 +7,24 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/depfinder-{{ version }}.tar.gz
-  sha256: 5d80bce796ea7a1994fb888ac4056e5ff9d2b390d7d656e75c45eedaef916090
+  sha256: 6b5187d07e0ca913afe88a00141ef098e5372313294a6165bfc6a6b292387894
+
 build:
   entry_points:
     - depfinder = depfinder.cli:cli
-  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  skip: True  # [py>310]
 
 requirements:
   host:
-    - python >=3.6,<3.10
     - pip
+    - python
   run:
-    - python >=3.6,<3.10
+    - python
     - pyyaml
     - requests
-    - stdlib-list
+    - stdlib-list  # [py<310]
 
 test:
   imports:
