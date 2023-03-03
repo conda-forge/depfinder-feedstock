@@ -10,6 +10,7 @@ source:
   sha256: 6b058dadbfc9970e7a6bf36ba0c9357cf4c14a926b5b4644f3ea192e6649cd8a
 
 build:
+  noarch: python
   entry_points:
     - depfinder = depfinder.cli:cli
   script: {{ PYTHON }} -m pip install . -vv
