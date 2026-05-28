@@ -1,0 +1,9 @@
+diff --git a/MANIFEST.in b/MANIFEST.in
+index bc6fd05..683c148 100644
+--- a/MANIFEST.in
++++ b/MANIFEST.in
+@@ -2,3 +2,4 @@ include versioneer.py
+ include depfinder/_version.py
+ include requirements.txt
+ include LICENSE
++include depfinder/pkg_data/*

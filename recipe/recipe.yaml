@@ -1,20 +1,24 @@
 schema_version: 1
 
 context:
-  version: 2.10.0
+  version: 2.11.0
 
 package:
   name: depfinder
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/d/depfinder/depfinder-${{ version }}.tar.gz
-  sha256: cbaf7c10d53689df8d0893193ff0eaf728e0f541bd935c464d33c614dc662791
+  url: https://github.com/ericdill/depfinder/archive/refs/tags/v${{ version }}.tar.gz
+  sha256: 89014b6d9a5d559e8d189c9f990764a7e8e229203077074d58a320fd14de2b7d
+  patches:
+    - 0001-patch-manifest.patch
 
 build:
-  number: 3
+  number: 0
   noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
+  script: 
+    - export SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }}
+    - ${{ PYTHON }} -m pip install . -vv
   python:
     entry_points:
       - depfinder = depfinder.cli:cli
@@ -24,10 +28,13 @@ requirements:
     - pip
     - python ${{ python_min }}.*
     - setuptools
+    - setuptools-scm
   run:
     - python >=${{ python_min }}
     - pyyaml
     - requests
+  run_constraints:
+    - conda-forge-metadata >=0.14.0
 
 tests:
   - python:
